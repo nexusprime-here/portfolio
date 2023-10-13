@@ -6,12 +6,15 @@ import { MdHeadset, MdHeadsetOff } from 'react-icons/md';
 function SongController() {
 	const [enableMusic, setEnableMusic] = useState<boolean | null>(null);
 	const audioRef = createRef<HTMLAudioElement>();
+	const modalElement = document.getElementById('start-modal');
 
 	useEffect(() => {
 		const audio = audioRef.current!;
 
+		while(modalElement?.getAttribute('data-open') == 'true') {}
+
 		if(enableMusic == null) {
-			setTimeout(() => setEnableMusic(true), 2000)
+			setTimeout(() => setEnableMusic(true), 1000)
 		}
 
 		if (enableMusic) {
@@ -20,7 +23,7 @@ function SongController() {
 		} else {
 			audio.pause();
 		}
-	}, [audioRef, enableMusic]);
+	}, [audioRef, enableMusic, modalElement]);
 
 	const Icon = () => {
 		const args = {

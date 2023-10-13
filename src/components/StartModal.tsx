@@ -11,12 +11,12 @@ function StartModal() {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 backdrop-blur-md z-[60] ${
-        isOpen ? 'block' : 'hidden'
-      }`}
-	  onClick={closeModal}
+		data-open={isOpen}
+		className='fixed top-0 left-0 w-full h-full data-[open=false]:hidden flex justify-center items-center bg-black bg-opacity-80 backdrop-blur-md z-[60]'
+		onClick={closeModal}
+		id='start-modal'
     >
-        <p className="text-2xl font-semibold mb-4 text-white">Click here to start</p>
+        <p className="text-6xl mb-4 text-white">Click here to start</p>
     </div>
   );
 }
