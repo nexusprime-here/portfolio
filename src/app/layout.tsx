@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import ParticlesContainer from './particles';
 import Header from '@/components/Header';
 import SongController from './song';
+import StartModal from '@/components/StartModal';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,8 @@ export default function RootLayout({
 	return (
 		<html lang="pt-br">
 			<body className="bg-zinc-300" style={{ ...inter.style }}>
+				<StartModal />
+
 				<ParticlesContainer />
 
 				<Header />
