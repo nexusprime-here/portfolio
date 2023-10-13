@@ -4,15 +4,14 @@ import { createRef, useEffect, useState } from 'react';
 import { MdHeadset, MdHeadsetOff } from 'react-icons/md';
 
 function SongController() {
-	const [enableMusic, setEnableMusic] = useState(true);
+	const [enableMusic, setEnableMusic] = useState<boolean | null>(null);
 	const audioRef = createRef<HTMLAudioElement>();
 
 	useEffect(() => {
-		const audio = audioRef.current;
-		if(!audio) {
-			setEnableMusic(true);
+		const audio = audioRef.current!;
 
-			return;
+		if(enableMusic == null) {
+			setTimeout(() => setEnableMusic(true), 2000)
 		}
 
 		if (enableMusic) {
@@ -36,7 +35,10 @@ function SongController() {
 	}
 
 	return (
-		<div className='h-16 absolute bottom-10 left-10 flex flex-row items-center backdrop-blur-sm bg-[rgba(0,0,0,.02)] rounded-md p-5'>
+		<div
+			data-hidden={enableMusic == null} 
+			className='h-16 absolute bottom-10 left-10 flex data-[hidden=true]:hidden flex-row items-center backdrop-blur-sm bg-[rgba(0,0,0,.02)] rounded-md p-5'
+		>
 			<audio ref={audioRef} src="music.mp3" loop />
 			<Icon />
 			{enableMusic
