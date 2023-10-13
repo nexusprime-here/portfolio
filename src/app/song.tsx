@@ -16,7 +16,7 @@ function SongController() {
 
 		if (enableMusic) {
 			audio.volume = .010;
-			audio.play();
+			audio.play().catch(() => setEnableMusic(true));
 		} else {
 			audio.pause();
 		}
