@@ -11,7 +11,7 @@ function StartModal() {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-60 z-[60] ${
+      className={`fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 backdrop-blur-md z-[60] ${
         isOpen ? 'block' : 'hidden'
       }`}
 	  onClick={closeModal}
