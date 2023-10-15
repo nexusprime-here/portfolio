@@ -21,23 +21,42 @@ export default function Home() {
 				</div>
 
 				<div className="grid grid-cols-3 grid-rows-2 sm:flex sm:flex-row sm:space-x-10 mt-16">
-					<LangIcon name="zig" svg className="row-start-1 col-start-2" />
-					<LangIcon name="js" svg className="row-start-2 col-start-1" />
-					<LangIcon name="py" svg className="row-start-2 col-start-3" />
+					<LangIcon className="row-start-1 col-start-2" name="zig" svg />
+					<LangIcon className="row-start-2 col-start-1" name="js" svg />
+					<LangIcon className="row-start-2 col-start-3" name="py" svg />
 				</div>
 			</Section>
 
-			<Section id="aboutme" className="relative h-full w-full flex items-center justify-center">
-				<Avatar className="h-60 w-60">
-					<AvatarImage src="/avatar.webp" />
-				</Avatar>
+			<Section 
+				id="aboutme" 
+				className="relative h-full w-full flex flex-col sm:flex-row items-center justify-center space-x-2"
+			>
+				<div>
+					<Avatar className="h-60 w-60">
+						<AvatarImage src="/avatar.jpeg" />
+					</Avatar>
 
-				<main className="ml-32" >
+					<p className="text-xs">"Você não é nada sozinho, acredite nas pessoas!"</p>
+				</div>
+
+				<main className="w-[40%]">
+				<h1 className="font-semibold text-xl w-full text-center">About me</h1>
+
+					<p className="mt-5">
+						Me dedico muito à minha profissão como programador, mas também tenho grande
+						capacidade de planejamento e organização de equipe. 
+						<br />
+						Meu nome real é Nícolas Estevão, e eu tenho 18 anos atualmente.
+						Minha principal linguagem é Javascript, mas eu também costumo trabalhar
+						com Zig e Python.
+					</p>
+					<br />
+					
+					Outras coisas sobre mim:
 					<ul className="list-disc space-y-2">
-						<li>Minha linguagem principal é Javascript</li>
 						<li>Trabalhando em lojas dropshipping usando Shopify</li>
 						<li>Interesse em compiladores e interpretadores</li>
-						<li>Tenho 18 anos atualmente</li>
+						<li>Aprendendo sobre performance em JS</li>
 					</ul>
 				</main>
 			</Section>

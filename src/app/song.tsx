@@ -15,17 +15,18 @@ function SongController() {
 		}
 
 		if (enableMusic == undefined) {
+			audio.currentTime = 31.5;
+			audio.volume = .010;
 			document.addEventListener('modalClosed', toggleMusicWhenModalClosed);
 		}
 		else if (enableMusic) {
-			audio.volume = .010;
 			audio.play();
 		} else {
 			audio.pause();
 		}
 
 		return () => {
-			document.addEventListener('modalClosed', toggleMusicWhenModalClosed);
+			document.removeEventListener('modalClosed', toggleMusicWhenModalClosed);
 		}
 	}, [audioRef, enableMusic]);
 
