@@ -1,7 +1,7 @@
 import '../globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google';
-import ParticlesContainer from './particles';
+import Particles from './particles';
 import Header from '@/components/Header';
 import SongController from './song';
 import StartModal from '@/components/StartModal';
@@ -23,8 +23,7 @@ export default function RootLayout({
 			<body className="bg-zinc-300" style={{ ...inter.style }}>
 				<StartModal />
 
-				<ParticlesContainer />
-
+				<Particles />
 				<Header />
 
 				<main className="h-screen flex flex-col overflow-x-hidden overflow-y-hidden scroll-smooth z-10">

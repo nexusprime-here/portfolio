@@ -4,26 +4,30 @@ import { createRef, useEffect, useState } from 'react';
 import { MdHeadset, MdHeadsetOff } from 'react-icons/md';
 
 function SongController() {
-	const [enableMusic, setEnableMusic] = useState<boolean | null>(null);
+	const [enableMusic, setEnableMusic] = useState<boolean | undefined>(undefined);
 	const audioRef = createRef<HTMLAudioElement>();
-	const modalElement = document.getElementById('start-modal');
 
 	useEffect(() => {
 		const audio = audioRef.current!;
 
-		while(modalElement?.getAttribute('data-open') == 'true') {}
-
-		if(enableMusic == null) {
-			setTimeout(() => setEnableMusic(true), 1000)
+		const toggleMusicWhenModalClosed = () => {
+			setTimeout(() => setEnableMusic(true), 1500)
 		}
 
-		if (enableMusic) {
+		if (enableMusic == undefined) {
+			document.addEventListener('modalClosed', toggleMusicWhenModalClosed);
+		}
+		else if (enableMusic) {
 			audio.volume = .010;
-			audio.play().catch(() => setEnableMusic(true));
+			audio.play();
 		} else {
 			audio.pause();
 		}
-	}, [audioRef, enableMusic, modalElement]);
+
+		return () => {
+			document.addEventListener('modalClosed', toggleMusicWhenModalClosed);
+		}
+	}, [audioRef, enableMusic]);
 
 	const Icon = () => {
 		const args = {
@@ -39,7 +43,7 @@ function SongController() {
 
 	return (
 		<div
-			data-hidden={enableMusic == null} 
+			data-hidden={enableMusic == null}
 			className='h-16 absolute bottom-10 left-10 flex data-[hidden=true]:hidden flex-row items-center backdrop-blur-sm bg-[rgba(0,0,0,.02)] rounded-md p-5'
 		>
 			<audio ref={audioRef} src="music.mp3" loop />
