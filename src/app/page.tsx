@@ -35,8 +35,6 @@ export default function Home() {
 					<Avatar className="h-60 w-60">
 						<AvatarImage src="/avatar.jpeg" />
 					</Avatar>
-
-					<p className="text-xs">"Você não é nada sozinho, acredite nas pessoas!"</p>
 				</div>
 
 				<main className="w-[40%]">
