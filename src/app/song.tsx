@@ -45,14 +45,14 @@ function SongController() {
 	return (
 		<div
 			data-hidden={enableMusic == null}
-			className='h-16 absolute bottom-10 left-10 flex data-[hidden=true]:hidden flex-row items-center backdrop-blur-sm bg-[rgba(0,0,0,.02)] rounded-md p-5'
+			className='h-16 absolute bottom-4 left-4 md:bottom-10 md:left-10 flex data-[hidden=true]:hidden flex-row items-center backdrop-blur-sm bg-[rgba(0,0,0,.02)] rounded-md p-3 md:p-5'
 		>
 			<audio ref={audioRef} src="music.mp3" loop />
 			<Icon />
 			{enableMusic
 				? (
 					<div className='ml-4 select-none'>
-						<h3 className='font-semibold'>Now playing</h3>
+						<h6 className='font-semibold'>Now playing</h6>
 						<p className='text-sm'>Slushii - All I Need</p>
 					</div>
 				)

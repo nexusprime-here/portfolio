@@ -10,7 +10,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Nexusfólio',
-	description: 'Portfólio de nexus_prime',
+	description: 'Hi! I\'m Nexus Prime, a Fullstack Developer!',
+	colorScheme: "only light",
+	themeColor: "#679099"
 }
 
 export default function RootLayout({

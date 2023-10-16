@@ -10,7 +10,7 @@ import { AvatarImage } from "@radix-ui/react-avatar";
 export default function Home() {
 	return (
 		<>
-			<Section id="home" className="h-full w-full flex flex-col items-center justify-center">
+			<Section id="home" className="flex flex-col items-center justify-center">
 				<div className="flex flex-col items-center">
 					<h1 className="text-4xl sm:text-6xl lg:text-[5rem] select-none font-mono font-light">
 						Nexus Prime
@@ -27,34 +27,32 @@ export default function Home() {
 				</div>
 			</Section>
 
-			<Section 
-				id="aboutme" 
-				className="relative h-full w-full flex flex-col sm:flex-row items-center justify-center space-x-2"
+			<Section
+				id="aboutme"
+				className="relative flex flex-col sm:space-x-1 md:space-x-20 sm:flex-row items-center justify-center"
 			>
 				<div>
-					<Avatar className="h-60 w-60">
+					<Avatar className="h-28 w-28 md:h-60 md:w-60">
 						<AvatarImage src="/avatar.jpeg" />
 					</Avatar>
 				</div>
 
-				<main className="w-[40%]">
-				<h1 className="font-semibold text-xl w-full text-center">About me</h1>
-
-					<p className="mt-5">
-						Me dedico muito à minha profissão como programador, mas também tenho grande
-						capacidade de planejamento e organização de equipe. 
+				<main className="md:w-[40%]">
+					<h3 className="font-semibold w-full text-center">About me</h3>
+					<p className="mt-4 text-center">
+						I'm very dedicated to my profession as a programmer, but I also have a strong ability in team planning and organization.
 						<br />
-						Meu nome real é Nícolas Estevão, e eu tenho 18 anos atualmente.
-						Minha principal linguagem é Javascript, mas eu também costumo trabalhar
-						com Zig e Python.
+						My real name is Nícolas Estevão, and I'm currently 18 years old.
+						My primary language is Javascript, but I also often work with Zig and Python.
 					</p>
 					<br />
-					
-					Outras coisas sobre mim:
-					<ul className="list-disc space-y-2">
-						<li>Trabalhando em lojas dropshipping usando Shopify</li>
-						<li>Interesse em compiladores e interpretadores</li>
-						<li>Aprendendo sobre performance em JS</li>
+					<h5 className="font-semibold">Other things about me:</h5>
+					<ul className="list-disc ml-10">
+						<li>Working on dropshipping stores using Shopify</li>
+						<li>Interest in compilers and interpreters</li>
+						<li>Learning about performance in JS</li>
+						<li>Using Next.js in my web applications</li>
+						<li>Using the superset Typescript</li>
 					</ul>
 				</main>
 			</Section>

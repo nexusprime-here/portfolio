@@ -74,13 +74,6 @@
 	display: none;
 }
 
-.glass {
-	background-color: rgba(255, 255, 255, 0.3);
-	backdrop-filter: blur(8px);
-	box-shadow: -40px -31px 17px -20px rgba(255, 255, 255, 0.2) inset,
-		-20px -18px 16px -20px rgba(255, 255, 255, 0.4) inset;
-}
-
 @layer base {
 	* {
 		@apply border-border;
@@ -88,5 +81,26 @@
 
 	body {
 		@apply bg-background text-foreground;
+	}
+	h1 {
+		@apply text-4xl
+	}
+	h2 {
+		@apply text-3xl
+	}
+	h3 {
+		@apply text-2xl
+	}
+	h4 {
+		@apply text-xl
+	}
+	h5 {
+		@apply text-lg
+	}
+	h6 {
+		@apply text-base
+	}
+	p,span,li {
+		@apply text-sm
 	}
 }
