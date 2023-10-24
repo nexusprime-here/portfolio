@@ -19,7 +19,7 @@ function StartModal() {
 		onTouchEnd={closeModal}
 		id='start-modal'
     >
-        <p className="text-3xl mb-4 text-white">Click here to start</p>
+        <p className="text-3xl mb-4 text-white cursor-pointer">Click here to start</p>
     </div>
   );
 }

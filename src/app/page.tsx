@@ -1,6 +1,5 @@
 'use client'
 
-import ChevronDown from "@/components/ChevronDown";
 import { Section } from "@/components/section";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
@@ -40,9 +39,9 @@ export default function Home() {
 				<main className="md:w-[40%]">
 					<h3 className="font-semibold w-full text-center">About me</h3>
 					<p className="mt-4 text-center">
-						I'm very dedicated to my profession as a programmer, but I also have a strong ability in team planning and organization.
+						I&apos;m very dedicated to my profession as a programmer, but I also have a strong ability in team planning and organization.
 						<br />
-						My real name is Nícolas Estevão, and I'm currently 18 years old.
+						My real name is Nícolas Estevão, and I&apos;m currently 18 years old.
 						My primary language is Javascript, but I also often work with Zig and Python.
 					</p>
 					<br />
