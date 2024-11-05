@@ -1,7 +1,7 @@
-import {} from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Section } from "@/components/section";
 import { Button } from "@/components/ui/button";
-import { ACard } from "../page";
+import ACard from "../../components/ACard";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 
