@@ -11,7 +11,7 @@ const Section = React.forwardRef<
 		ref={ref}
 		className={cn(
 			"flex-1 w-screen min-h-screen overflow-y-auto gap-5",
-			"p-6 md:p-10 lg:py-14 lg:px-24",
+			"p-6 md:p-10 lg:py-14 px-[5vw]",
 			className
 		)}
 		{...props}

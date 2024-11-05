@@ -1,6 +1,6 @@
 export enum ContractRole {
   FullstackDev = 'f',
   GameDev = 'g',
-  DataScienceDev = 'd',
+  Administrator = 'a',
   Marketing = 'm'
 }

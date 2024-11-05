@@ -37,6 +37,10 @@
 	}
 }
 
+* {
+	font-family: var(--font-inter);
+}
+
 *::-webkit-scrollbar {
 	display: none;
 }
